@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="forecast">Forecast</string>
+    <string name="wind_speed">Wind Speed</string>
+    <string name="absentField">-</string>
+    <string name="forecast_standard_deviation">Standard Deviation</string>
+    <string name="current_temperature">Temperature</string>
+    <string name="temperature">%1$f °C / %2$f °F</string>
+</resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/temperatureText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/current_temperature"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standard_spacing"
+        app:layout_constraintStart_toEndOf="@+id/temperatureText"
+        app:layout_constraintTop_toTopOf="@+id/temperatureText"
+        tools:text="14 °C / 39 °F" />
+
+    <TextView
+        android:id="@+id/windSpeedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/standard_spacing"
+        android:text="@string/wind_speed"
+        app:layout_constraintStart_toStartOf="@+id/temperatureText"
+        app:layout_constraintTop_toBottomOf="@id/temperatureText" />
+
+    <TextView
+        android:id="@+id/windSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standard_spacing"
+        app:layout_constraintLeft_toRightOf="@id/windSpeedText"
+        app:layout_constraintTop_toTopOf="@id/windSpeedText"
+        tools:text="Wind Speed" />
+
+    <TextView
+        android:id="@+id/forecastStandardDeviationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/standard_spacing"
+        android:text="@string/forecast_standard_deviation"
+        app:layout_constraintStart_toStartOf="@+id/temperatureText"
+        app:layout_constraintTop_toBottomOf="@id/windSpeedText" />
+
+    <TextView
+        android:id="@+id/forecastStandardDeviation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standard_spacing"
+        android:text="@string/absentField"
+        app:layout_constraintLeft_toRightOf="@id/forecastStandardDeviationText"
+        app:layout_constraintTop_toTopOf="@id/forecastStandardDeviationText" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/cloudImage"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/ic_baseline_wb_cloudy_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/forecastButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/standard_spacing"
+        android:text="@string/forecast"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
