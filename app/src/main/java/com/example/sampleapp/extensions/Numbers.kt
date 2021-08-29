@@ -13,4 +13,4 @@ val FloatArray.standardDeviation
         return sqrt(standardDeviation / size)
     }
 
-val Number.celsiusToFahrenheit get() = toFloat() * 1.8f + 32
+fun Number.celsiusToFahrenheit() = toFloat() * 1.8f + 32
