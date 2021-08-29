@@ -1,0 +1,22 @@
+{
+  "coord": {
+    "lon": -122.42,
+    "lat": 37.77
+  },
+  "weather": {
+    "temp": 14.77,
+    "pressure": 1007,
+    "humidity": 85
+  },
+  "wind": {
+    "speed": 0.51,
+    "deg": 284
+  },
+  "rain": {
+    "3h": 1
+  },
+  "clouds": {
+    "cloudiness": 65
+  },
+  "name": "San Francisco"
+}
