@@ -20,6 +20,6 @@ data class WeatherResponse(
 
     val tempInCelsius get() = weather.temperature
 
-    val tempInFahrenheit get() = tempInCelsius.celsiusToFahrenheit
+    val tempInFahrenheit get() = tempInCelsius.celsiusToFahrenheit()
 
 }

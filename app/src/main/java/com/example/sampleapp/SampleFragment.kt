@@ -35,11 +35,7 @@ class SampleFragment : Fragment() {
     }
 
     private fun onWeatherResult(response: WeatherResponse) {
-        val tempFormattedString = formatTemperatureString(
-            response.tempInCelsius,
-            response.tempInFahrenheit
-        )
-        binding.temperature.text = tempFormattedString
+        binding.temperature.text = getTemperatureString(response)
         binding.windSpeed.text = response.wind.speed.toString()
         binding.cloudImage.isVisible = response.isCloudy
     }
@@ -48,8 +44,7 @@ class SampleFragment : Fragment() {
         binding.forecastStandardDeviation.text = standardDeviation.toString()
     }
 
-    private fun formatTemperatureString(celsius: Float, fahrenheit: Float): String {
-        return getString(R.string.temperature, celsius, fahrenheit)
-    }
+    private fun getTemperatureString(response: WeatherResponse) =
+        getString(R.string.temperature, response.tempInCelsius, response.tempInFahrenheit)
 
 }
