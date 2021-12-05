@@ -7,7 +7,7 @@ plugins {
 
 android {
     compileSdk 31
-    compileSdkVersion 31
+    compileSdkVersion 32
     buildToolsVersion '32.0.0 rc1'
     buildFeatures {
         viewBinding true
@@ -16,7 +16,7 @@ android {
     defaultConfig {
         applicationId "com.example.sampleapp"
         minSdk 21
-        targetSdkVersion 31
+        targetSdkVersion 32
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -53,10 +53,12 @@ ext {
     constraintLayout_version = '2.1.2'
     coroutine_version = '1.5.2'
     junit_version = "4.13.2"
-    koin_version = "2.2.2"
+    koin_version = '3.1.4'
+    ktx_version = "1.7.0"
+    lifecycle_version = "2.4.0"
     material_version = "1.4.0"
     mockk_version = '1.12.1'
-    moshi_version = "1.12.0"
+    moshi_version = '1.13.0'
     multidex_version = "2.0.1"
     retrofit_version = "2.9.0"
 }
@@ -77,6 +79,7 @@ dependencies {
 
     implementation "com.squareup.moshi:moshi:$moshi_version"
     kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshi_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
 
     implementation "com.squareup.retrofit2:converter-moshi:$retrofit_version"
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
@@ -86,12 +89,12 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutine_version"
 
     implementation "com.google.android.material:material:$material_version"
+    implementation "androidx.core:core-ktx:$ktx_version"
 
 
-    implementation "org.koin:koin-androidx-scope:$koin_version"
-    implementation "org.koin:koin-androidx-viewmodel:$koin_version"
-    implementation "org.koin:koin-androidx-fragment:$koin_version"
-    implementation "org.koin:koin-androidx-ext:$koin_version"
+    // Koin main features for Android
+    implementation "io.insert-koin:koin-android:$koin_version"
+    implementation "io.insert-koin:koin-android-compat:$koin_version"
 }
 
 
